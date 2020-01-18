@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - 8.8.1
+before_script:
+  - npm install
+  - npm run build
+script: echo "npm test temporarily disabled"
+branches:
+  only:
+    - master
+    - develop
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  bucket: "$AWS_BUCKET_NAME"
+  skip_cleanup: true
+  region: "us-east-1"
+  acl: public_read
+  local_dir: build
