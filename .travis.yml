@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 8.8.1
+  - 12.5.0
 before_script:
   - npm install
   - npm run build
@@ -10,6 +10,9 @@ branches:
     - master
     - develop
 deploy:
+  on:
+    all_branches: true
+    condition: $TRAVIS_BRANCH =~ ^(develop|production)
   provider: s3
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
