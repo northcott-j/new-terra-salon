@@ -12,7 +12,7 @@ branches:
 deploy:
   on:
     all_branches: true
-    condition: $TRAVIS_BRANCH =~ ^(develop|production)
+    condition: $TRAVIS_BRANCH =~ ^(develop|master)
   provider: s3
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
