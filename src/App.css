@@ -71,8 +71,16 @@
   white-space: pre-line;
 }
 
+.clear-margins {
+  margin: 0 0 0 0 !important;
+}
+
 .ui.menu {
   margin-bottom: 0px !important;
+}
+
+.ui.menu .navbar-logo:before {
+  width: 0px !important;
 }
 
 .ui.menu .active.item {
@@ -80,6 +88,10 @@
   background: none !important;
   text-decoration: underline !important;
   text-decoration-color: var(--main-grey-clor) !important;
+}
+
+.ui.menu .grey.active.item {
+  color: var(--main-green-color) !important;
 }
 
 .ui.menu .item:hover {
