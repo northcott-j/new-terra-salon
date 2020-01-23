@@ -5,10 +5,12 @@
 
 .App {
   text-align: center;
+  height: 100%;
 }
 
-.terra-navbar {
-  color: #7f874f;
+.page {
+  padding-top: 1em;
+  height: 100%;
 }
 
 .green {
@@ -19,13 +21,17 @@
   color: var(--main-grey-clor) !important;
 }
 
-.menu .active.item {
+.ui.menu {
+  margin-bottom: 0px !important;
+}
+
+.ui.menu .active.item {
   color: var(--main-green-color) !important;
   background: none !important;
   text-decoration: underline !important;
   text-decoration-color: var(--main-grey-clor) !important;
 }
 
-.menu .item:hover {
+.ui.menu .item:hover {
   color: var(--main-green-color) !important;
 }

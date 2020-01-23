@@ -11,7 +11,7 @@ class NavBar extends Component {
       <Menu stackable borderless size='huge' >
         <Menu.Item
           name='home'
-          href='/home'
+          href='/#/'
           >
           <Image src={logo} alt="Terra Salon Logo" size='small' />
         </Menu.Item>

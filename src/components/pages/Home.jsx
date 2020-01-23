@@ -1,7 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Page from './Page';
 
-class Home extends Component {
-  render() {
+class Home extends Page {
+  CONTENTFUL_ID = 'vCdkXXRVwLWXms4PgZAPK';
+
+  childRender() {
     return (
       <div className="home">
         <h2>Home</h2>

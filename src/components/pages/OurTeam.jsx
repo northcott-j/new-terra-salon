@@ -1,18 +1,12 @@
-import React, { Component } from 'react';
-import { Helmet } from "react-helmet";
+import React from 'react';
+import Page from './Page';
 
-class OurTeam extends Component {
-  render() {
+class OurTeam extends Page {
+  CONTENTFUL_ID = '3TUOPNwXzsUDOY45XnYE0g';
+
+  childRender() {
     return (
       <div className="our-team">
-        <Helmet>
-          { /* TODO :: Make this use Contentful to generate */ }
-          <meta charSet="utf-8" />
-          <title>Our Team - Terra Salon in Nashua, NH</title>
-          <meta name="description" content="Terra is a full service salon
-          located in Nashua, NH that is committed to providing earth friendly hair care services." />
-          <link rel="canonical" href="http://www.terrasalonnh.com/" />
-        </Helmet>
         <h2>Our Team</h2>
       </div>
     );
