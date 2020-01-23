@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import NavBar from './components/Navbar';
+import Footer from './components/Footer';
 import { Helmet } from "react-helmet";
 import AppProvider from './components/AppProvider';
+import AppContext from './app-context';
 
 class App extends Component {
   render() {
@@ -18,6 +20,11 @@ class App extends Component {
           </Helmet>
           <NavBar />
           {this.props.children}
+          <AppContext.Consumer>
+            {(context) => (
+              <Footer context={ context } />
+            )}
+          </ AppContext.Consumer>
         </div>
       </AppProvider>
     );

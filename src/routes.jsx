@@ -1,6 +1,6 @@
-import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import App from './App'
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import App from './App';
 import AppContext from './app-context';
 import Home from './components/pages/Home';
 import Services from './components/pages/Services';

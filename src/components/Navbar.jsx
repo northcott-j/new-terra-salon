@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, Image } from 'semantic-ui-react'
-import logo from '../logo.png'
+import { Menu, Image } from 'semantic-ui-react';
+import logo from '../logo.png';
 
 class NavBar extends Component {
   state = {}
