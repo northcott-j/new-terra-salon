@@ -83,7 +83,7 @@
   width: 0px !important;
 }
 
-.ui.menu .active.item {
+.ui.menu .active.item:not(.navbar-icon) {
   color: var(--main-green-color) !important;
   background: none !important;
   text-decoration: underline !important;

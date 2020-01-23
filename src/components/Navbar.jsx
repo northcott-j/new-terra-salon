@@ -32,14 +32,14 @@ class NavBar extends Component {
 
   render() {
     const renderMenuItems = (isMobile) => {
-      const style = (isMobile) ? {flex: 1} : {}
+      const className = (isMobile) ? "navbar-icon" : "";
         return this.state.menuItems.map((menuItem) =>
           <Menu.Item
             as={NavLink}
             name={ menuItem.name }
             color={ menuItem.color }
             to={ menuItem.to }
-            style={ style }
+            className={ className }
             >
             { (isMobile) ? <Icon className="clear-margins"
                                  size="large"
