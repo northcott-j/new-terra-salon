@@ -10,21 +10,15 @@ class ContactUs extends Page {
   PAGE_NAME = 'contact-us';
 
   childRender() {
-    const contactMapping = () => {
-      const mapping = {};
-      this.state.data.fields.subItems.forEach((method) =>
-        mapping[method.fields.name] = method.fields
-      );
-      return mapping;
-    };
     const awaitRender = () => {
       if (this.state.data) {
-        const contacts = contactMapping();
+        const contacts = this.state.appState.contactMapping(this.state.data);
         return (
           <div style={ {paddingLeft: "15px"} }>
             <AddressBlock address={ contacts["Store Location"].text }
                           phone={ contacts.Phone.text }
-                          email={ contacts.Email.text } />
+                          email={ contacts.Email.text }
+                          order={ ['address', 'phone', 'email'] } />
             <ContactForm />
             <Hours hours={ this.state.data.fields.content.hours } />
             <Navigate mapsUrl={ this.state.data.fields.content['google-iframe'] }

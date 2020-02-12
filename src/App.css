@@ -2,7 +2,9 @@
   --main-green-color: #7f874f;
   --main-light-green-color: #9ea864;
   --main-grey-color: #404040;
+  --main-light-grey-color: #666666;
   --main-brown-color: #767474;
+  --main-trans-background: rgba(255,255,255,.75);
 }
 
 .App {
@@ -30,6 +32,43 @@
   text-align: left;
 }
 
+.home {
+
+}
+
+.home-content {
+  align-items: center;
+  border-radius: 10px;
+  background-color: var(--main-trans-background);
+  padding-bottom: 20px;
+}
+
+.home-content img {
+  width: 45%;
+  min-width: 300px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.home-salon-description {
+  width: 65%;
+  margin: auto;
+  font-size: 1.5em;
+  margin-bottom: 25px;
+}
+
+.home-content .address-block {
+  text-align: center;
+  flex: 1;
+  margin-bottom: 0px;
+  align-items: center;
+}
+
+.home-content .address-block h4 {
+  margin-bottom: 0px;
+  color: var(--main-light-grey-color);
+}
+
 .services {
   text-align: left;
   font-size: 16px;
@@ -53,7 +92,7 @@
   margin-bottom: 20px;
 }
 
-.address-block h4 {
+.contact-us .address-block h4 {
   font-size: 18px;
 }
 
@@ -227,6 +266,10 @@
   width: 100%;
   padding: 10px;
   text-decoration: none;
+}
+
+.flex-object {
+  flex: 1;
 }
 
 input[type="text"],

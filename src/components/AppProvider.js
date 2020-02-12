@@ -10,6 +10,13 @@ export default class AppProvider extends Component {
             client: null,
             pages: {},
             _currentPage: null,
+            contactMapping: function(data) {
+              const mapping = {};
+              data.fields.subItems.forEach((method) =>
+                mapping[method.fields.name] = method.fields
+              );
+              return mapping;
+            },
             currentPage: function() { return this.state._currentPage }.bind(this),
             getPage: async function(pageId) {
               if (this.state.pages[pageId]) {
