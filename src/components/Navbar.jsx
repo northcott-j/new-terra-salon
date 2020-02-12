@@ -4,30 +4,35 @@ import { Menu, Image, Responsive, Icon } from 'semantic-ui-react';
 import logo from '../logo.png';
 
 class NavBar extends Component {
-  state = {
-    menuItems: [
-      {
-        name: 'services',
-        color: 'grey',
-        to: '/services',
-        text: 'Services',
-        icon: 'sitemap'
-      },
-      {
-        name: 'ourTeam',
-        color: 'grey',
-        to: '/our-team',
-        text: 'Our Team',
-        icon: 'users'
-      },
-      {
-        name: 'contactUs',
-        color: 'grey',
-        to: '/contact-us',
-        text: 'Contact Us',
-        icon: 'comments'
-      }
-    ]
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      appState: this.props.context,
+      menuItems: [
+        {
+          name: 'services',
+          color: 'grey',
+          to: '/services',
+          text: 'Services',
+          icon: 'sitemap'
+        },
+        {
+          name: 'ourTeam',
+          color: 'grey',
+          to: '/our-team',
+          text: 'Our Team',
+          icon: 'users'
+        },
+        {
+          name: 'contactUs',
+          color: 'grey',
+          to: '/contact-us',
+          text: 'Contact Us',
+          icon: 'comments'
+        }
+      ]
+    };
   }
 
   render() {
@@ -50,17 +55,25 @@ class NavBar extends Component {
     };
 
     const renderMenu = (isMobile) => {
-      return (
-        <Menu borderless={ !isMobile } size='huge'>
-          <Menu.Item
+      const renderLogo = (isOnHome) => {
+        if (isOnHome) {
+          return undefined;
+        } else {
+          return (<Menu.Item
             name='home'
             href='/#/'
             className='navbar-logo'
             >
             <Image src={logo} alt="Terra Salon Logo" size='small' />
-          </Menu.Item>
+          </Menu.Item>)
+        }
+      };
+      const isOnHome = this.state.appState.currentPage() === 'home';
+      return (
+        <Menu borderless={ !isMobile } size='huge'>
+          { renderLogo(isOnHome) }
           <Menu.Menu position='right' icon={ isMobile ? isMobile : undefined }>
-            { renderMenuItems(isMobile) }
+            { renderMenuItems(isMobile && !isOnHome) }
           </Menu.Menu>
         </Menu>
       )

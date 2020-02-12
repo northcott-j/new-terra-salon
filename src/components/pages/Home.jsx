@@ -3,6 +3,7 @@ import Page from './Page';
 
 class Home extends Page {
   CONTENTFUL_ID = 'vCdkXXRVwLWXms4PgZAPK';
+  PAGE_NAME = 'home';
 
   childRender() {
     return (

@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     return (
       <AppProvider>
-        <div className="App">
+        <div>
           <Helmet>
             <meta charSet="utf-8" />
             <title>Terra Salon | Nashua, NH</title>
@@ -18,11 +18,14 @@ class App extends Component {
             located in Nashua, NH that is committed to providing earth friendly hair care services." />
             <link rel="canonical" href="http://www.terrasalonnh.com/" />
           </Helmet>
-          <NavBar />
-          {this.props.children}
+
           <AppContext.Consumer>
             {(context) => (
-              <Footer context={ context } />
+              <div className="App">
+                <NavBar context={ context } />
+                {this.props.children}
+                <Footer context={ context } />
+              </div>
             )}
           </ AppContext.Consumer>
         </div>

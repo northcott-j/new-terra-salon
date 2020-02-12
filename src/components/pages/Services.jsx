@@ -4,6 +4,7 @@ import Service from '../Service';
 
 class Services extends Page {
   CONTENTFUL_ID = '3LDAtWbGp4mOtCQayJ2j8U';
+  PAGE_NAME = 'services';
 
   childRender() {
     const pageDescription = () => {

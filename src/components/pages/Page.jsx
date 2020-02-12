@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 
 class Page extends Component {
   CONTENTFUL_ID = '';
+  PAGE_NAME = null;
 
   constructor(props) {
     super(props);
@@ -16,6 +17,7 @@ class Page extends Component {
 
   async componentDidMount() {
     const data = await this.state.appState.getPage(this.CONTENTFUL_ID);
+    this.state.appState.setCurrentPage(this.PAGE_NAME);
     this.setState({ data });
   };
 

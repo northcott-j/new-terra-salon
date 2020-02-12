@@ -7,6 +7,7 @@ import Navigate from '../Navigate';
 
 class ContactUs extends Page {
   CONTENTFUL_ID = '5yRDW9exNLwrn7501EBBSF';
+  PAGE_NAME = 'contact-us';
 
   childRender() {
     const contactMapping = () => {

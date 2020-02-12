@@ -4,6 +4,7 @@ import JobOpening from '../JobOpening';
 
 class JoinTeam extends Page {
   CONTENTFUL_ID = '5vwyLonq0H2xnqSlKSjv1q';
+  PAGE_NAME = 'join-team';
 
   childRender() {
     const jobOpenings = () => {

@@ -9,14 +9,18 @@ export default class AppProvider extends Component {
         this.state = {
             client: null,
             pages: {},
+            _currentPage: null,
+            currentPage: function() { return this.state._currentPage }.bind(this),
             getPage: async function(pageId) {
               if (this.state.pages[pageId]) {
                 return Promise.resolve(this.state.pages[pageId]);
               } else {
                 return this.fetchPageDetails(pageId);
               }
+            }.bind(this),
+            setCurrentPage: function(pageName) {
+              this.setState({_currentPage: pageName});
             }.bind(this)
-
         }
     }
 
