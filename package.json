@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^13.4.0",
+    "@contentful/rich-text-react-renderer": "^13.4.0",
     "contentful": "^7.13.1",
     "cra-template": "1.0.0",
     "react": "^16.12.0",

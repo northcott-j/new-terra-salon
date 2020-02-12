@@ -79,6 +79,34 @@
   margin-bottom: 20px;
 }
 
+.join-team {
+  float: left;
+  width: 100%;
+}
+
+.job-opening {
+  font-size: 16px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.job-opening-content {
+  text-align: left;
+  max-width: 675px;
+  margin-bottom: 20px;
+}
+
+.job-opening h2 {
+  font-family: 'Montserrat', 'sans-serif';
+	font-weight: 700;
+	line-height: 35px;
+  margin-bottom: 0px;
+}
+
+.job-opening-offers {
+  margin-top: 20px;
+}
+
 .green {
   color: var(--main-green-color) !important;
 }
@@ -180,6 +208,25 @@
 	white-space: nowrap;
 	font-size: 14px;
 	color: #FFF;
+}
+
+.outlined-button {
+  	padding: 10px;
+    margin: auto;
+    background-color: Transparent;
+    border: 1px solid var(--main-light-green-color);
+}
+
+.outlined-button:hover {
+    color: white !important;
+    background-color: rgba(0,0,0,0.15);
+}
+
+.outlined-button a {
+  color: var(--main-light-green-color);
+  width: 100%;
+  padding: 10px;
+  text-decoration: none;
 }
 
 input[type="text"],
