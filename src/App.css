@@ -17,6 +17,32 @@
   height: 100%;
 }
 
+.page-content {
+  margin-top: 2%;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-family: Lato, sans-serif;
+  margin-bottom: 10%;
+}
+
+.page-header {
+  text-align: left;
+}
+
+.services {
+  text-align: left;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.services-description {
+  margin-bottom: 24px;
+}
+
+.service {
+  margin-bottom: 1.5em;
+}
+
 .green {
   color: var(--main-green-color) !important;
 }

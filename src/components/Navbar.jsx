@@ -36,6 +36,7 @@ class NavBar extends Component {
         return this.state.menuItems.map((menuItem) =>
           <Menu.Item
             as={NavLink}
+            key={ menuItem.name }
             name={ menuItem.name }
             color={ menuItem.color }
             to={ menuItem.to }
@@ -58,7 +59,7 @@ class NavBar extends Component {
             >
             <Image src={logo} alt="Terra Salon Logo" size='small' />
           </Menu.Item>
-          <Menu.Menu position='right' icon={ isMobile }>
+          <Menu.Menu position='right' icon={ isMobile ? isMobile : undefined }>
             { renderMenuItems(isMobile) }
           </Menu.Menu>
         </Menu>

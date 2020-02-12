@@ -53,8 +53,10 @@ class Page extends Component {
   render() {
     return (
       <div className="page" style={ this.buildBackgroundStyle() }>
-        { this.buildHelmet() }
-        { this.childRender() }
+        <div className="page-content">
+          { this.buildHelmet() }
+          { this.childRender(this.state.data) }
+        </div>
       </div>
     )
   }
