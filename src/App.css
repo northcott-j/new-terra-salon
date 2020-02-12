@@ -1,5 +1,6 @@
 :root {
   --main-green-color: #7f874f;
+  --main-light-green-color: #9ea864;
   --main-grey-color: #404040;
   --main-brown-color: #767474;
 }
@@ -14,7 +15,7 @@
 .page {
   flex: 1;
   padding-top: 1em;
-  height: 100%;
+  height: max-content;
 }
 
 .page-content {
@@ -41,6 +42,41 @@
 
 .service {
   margin-bottom: 1.5em;
+}
+
+.contact-us {
+
+}
+
+.address-block {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.address-block h4 {
+  font-size: 18px;
+}
+
+.contact-form {
+  text-align: left;
+  align-items: left;
+  margin-bottom: 20px;
+}
+
+.hours {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.hours h4 {
+  font-size: 1.25em;
+  margin-bottom: 10px;
+}
+
+.navigate {
+  border: 0;
+  float: left;
+  margin-bottom: 20px;
 }
 
 .green {
@@ -122,4 +158,37 @@
 
 .ui.menu .item:hover {
   color: var(--main-green-color) !important;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.branded-button {
+  text-align: center;
+	text-transform: uppercase;
+	padding: 5px 20px 5px 20px;
+	border-radius: 4px;
+	margin: 10px;
+	border: none;
+	background-color: var(--main-light-green-color);
+	box-shadow: none;
+	text-shadow: none;
+	font-weight: 400;
+	vertical-align: middle;
+	cursor: pointer;
+	white-space: nowrap;
+	font-size: 14px;
+	color: #FFF;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	color: #555;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 0;
 }
