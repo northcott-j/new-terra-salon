@@ -16,7 +16,7 @@ class OurTeam extends Page {
       if (this.state.data) {
         return this.state.data.fields.subItems.map((item) =>
           <button onClick={() => this.loadProfile(item)} key={item.fields.name} className="profile-icon">
-            <img src={item.fields.profile.fields.file.url} className="iconPic"></img>
+            <img alt='profilePics' src={item.fields.profile.fields.file.url} className="iconPic"></img>
             <div className="iconName">{item.fields.name}</div>
             <div className="iconTitle">{item.fields.title}</div>
           </button>
