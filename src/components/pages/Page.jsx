@@ -11,7 +11,9 @@ class Page extends Component {
 
     this.state = {
       appState: this.props.context,
-      data: null
+      data: null,
+      show_all_employees: true,
+      current_employee: null
     };
   }
 
@@ -41,7 +43,7 @@ class Page extends Component {
         return (
           <Helmet>
             <title>{this.state.data.fields.meta.fields.metaTitle} - Terra Salon in Nashua, NH</title>
-            <meta name="description" content={ this.state.data.fields.meta.fields.metaDescription } />
+            <meta name="description" content={this.state.data.fields.meta.fields.metaDescription} />
           </Helmet>
         )
       }
@@ -54,10 +56,10 @@ class Page extends Component {
 
   render() {
     return (
-      <div className="page" style={ this.buildBackgroundStyle() }>
+      <div className="page" style={this.buildBackgroundStyle()}>
         <div className="page-content">
-          { this.buildHelmet() }
-          { this.childRender(this.state.data) }
+          {this.buildHelmet()}
+          {this.childRender(this.state.data)}
         </div>
       </div>
     )
