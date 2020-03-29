@@ -12,8 +12,9 @@ class Page extends Component {
     this.state = {
       appState: this.props.context,
       data: null,
-      show_all_employees: true,
-      current_employee: null
+      current_employee: null,
+      employeeGrid_list: null,
+      employeeGrid_list_loaded: false
     };
   }
 

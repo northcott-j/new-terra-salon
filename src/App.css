@@ -293,7 +293,7 @@ textarea {
 }
 
 
-/* Added for OurTeam.jsx & EmployeeIcon */
+/* Added for OurTeam & OurTeamList */
 .our-team-list {
   position: relative;
   width: 100%;
@@ -408,4 +408,43 @@ textarea {
   .profile-icons {
     width: 1160px;
   }
+}
+
+
+/* Added for ProfileGrid & ProfileGridLayout */
+
+.profileGrid-pic {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+.profileGrid-quote { 
+  text-align: left;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.profileGrid-quoted {
+  font-size: 16px;
+  text-align: left;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.profileGrid-bio { 
+  text-align: left;
+  font-size: 16px;
+}
+
+.profileGrid-name {
+  text-align: left;
+  width: 100%;
+}
+
+.profileGrid-body {
+  margin-top: 25px;
 }
