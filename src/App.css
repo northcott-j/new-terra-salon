@@ -14,24 +14,6 @@
   flex-direction: column;
 }
 
-.page {
-  flex: 1;
-  padding-top: 1em;
-  height: max-content;
-  position: relative;
-}
-
-.page-content {
-  position: relative;
-  width: 100%;
-  height: max-content;
-  margin-top: 2%;
-  padding-left: 10%;
-  padding-right: 10%;
-  font-family: Lato, sans-serif;
-  margin-bottom: 10%;
-}
-
 .page-header {
   text-align: left;
 }
@@ -447,4 +429,117 @@ textarea {
 
 .profileGrid-body {
   margin-top: 25px;
+}
+
+/* Added for NowHiring and Position */
+.imageBox {
+  display: grid;
+  width: 100%;
+}
+
+.headerPhoto {
+  max-width: 100%;
+  margin: auto;
+}
+
+.NHtitle {
+  text-align: left;
+  color: #6b6d73;
+}
+
+.partUnderline {
+  height: 5px;
+  width: 10%;
+  margin-bottom: 30px;
+  background-color: #9caa63;
+}
+
+.positions {
+  text-align: left;
+}
+
+.positionTitle {
+  font-size: 17px;
+  color: #6b6d73;
+}
+
+.jobType {
+  font-size: 14px;
+  font-style: italic;
+  color: #6b6d73;
+}
+
+.positionDescr {
+  font-style: italic;
+  color: #6b6d73;
+}
+
+.terraOffers {
+  font-size: 16px;
+  color: #6b6d73;
+}
+
+.offers {
+  line-height: 30px;
+  color: #6b6d73;
+}
+
+.ourSalon {
+  color: #6b6d73;
+}
+
+.footerPhotos {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  overflow: hidden;
+}
+
+.picRow {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
+}
+
+.picBM {
+  padding: 4px 0 0 0;
+  width: 100%;
+  height: auto;
+}
+
+.picBR {
+  padding: 8px 0 0 0;
+  width: 100%;
+  height: auto;
+}
+
+.picTR {
+  
+}
+
+
+/* Wraps all pages */
+.page {
+  flex: 1;
+  /* padding-top: 1em; */
+  height: max-content;
+  position: relative;
+}
+
+.page-content {
+  position: relative;
+  width: 100%;
+  height: max-content;
+  /* margin-top: 2%; 
+  padding-left: 10%;
+  padding-right: 10%;*/
+  font-family: Lato, sans-serif;
+  margin-bottom: 10%;
+}
+
+.margins {
+  padding-top: 1em;
+  margin-top: 2%;
+  padding-left: 10%;
+  padding-right: 10%;
 }

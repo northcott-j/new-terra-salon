@@ -27,17 +27,19 @@ class OurTeam extends Page {
     };
 
     return (
-      < div className="our-team" >
-        <div className="our-team-list" >
-          <h2 className="OurTeam-title">Our Team</h2>
-          <div className="profile-icons">
-            {getOurTeamList()}
-          </div>
-          <h5 className="OurTeam-footer">
-            {pageFooter()}
-          </h5>
+      <div className='margins'>
+        < div className="our-team" >
+          <div className="our-team-list" >
+            <h2 className="OurTeam-title">Our Team</h2>
+            <div className="profile-icons">
+              {getOurTeamList()}
+            </div>
+            <h5 className="OurTeam-footer">
+              {pageFooter()}
+            </h5>
+          </div >
         </div >
-      </div >
+      </div>
     );
   }
 }

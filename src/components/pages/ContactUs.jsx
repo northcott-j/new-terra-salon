@@ -14,22 +14,24 @@ class ContactUs extends Page {
       if (this.state.data) {
         const contacts = this.state.appState.contactMapping(this.state.data);
         return (
-          <div style={ {paddingLeft: "15px"} }>
-            <AddressBlock address={ contacts["Store Location"].text }
-                          phone={ contacts.Phone.text }
-                          email={ contacts.Email.text }
-                          order={ ['address', 'phone', 'email'] } />
+          <div style={{ paddingLeft: "15px" }}>
+            <AddressBlock address={contacts["Store Location"].text}
+              phone={contacts.Phone.text}
+              email={contacts.Email.text}
+              order={['address', 'phone', 'email']} />
             <ContactForm />
-            <Hours hours={ this.state.data.fields.content.hours } />
-            <Navigate mapsUrl={ this.state.data.fields.content['google-iframe'] }
-                      navigateUrl={ contacts["Store Location"].link } />
-        </div>)
+            <Hours hours={this.state.data.fields.content.hours} />
+            <Navigate mapsUrl={this.state.data.fields.content['google-iframe']}
+              navigateUrl={contacts["Store Location"].link} />
+          </div>)
       }
     };
     return (
-      <div className="contact-us">
-        <h1 className="page-header">Contact Us</h1>
-        { awaitRender() }
+      <div className='margins'>
+        <div className="contact-us">
+          <h1 className="page-header">Contact Us</h1>
+          {awaitRender()}
+        </div>
       </div>
     );
   }

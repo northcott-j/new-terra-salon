@@ -30,6 +30,14 @@ class NavBar extends Component {
           to: '/contact-us',
           text: 'Contact Us',
           icon: 'comments'
+        },
+        {
+          name: 'nowHiring',
+          color: 'green',
+          to: '/now-hiring',
+          text: 'Now Hiring',
+          //not sure about icon
+          //icon: 'comments'
         }
       ]
     };
@@ -38,20 +46,20 @@ class NavBar extends Component {
   render() {
     const renderMenuItems = (isMobile) => {
       const className = (isMobile) ? "navbar-icon" : "";
-        return this.state.menuItems.map((menuItem) =>
-          <Menu.Item
-            as={NavLink}
-            key={ menuItem.name }
-            name={ menuItem.name }
-            color={ menuItem.color }
-            to={ menuItem.to }
-            className={ className }
-            >
-            { (isMobile) ? <Icon className="clear-margins"
-                                 size="large"
-                                 name={ menuItem.icon } /> : menuItem.text }
-          </Menu.Item>
-        );
+      return this.state.menuItems.map((menuItem) =>
+        <Menu.Item
+          as={NavLink}
+          key={menuItem.name}
+          name={menuItem.name}
+          color={menuItem.color}
+          to={menuItem.to}
+          className={className}
+        >
+          {(isMobile) ? <Icon className="clear-margins"
+            size="large"
+            name={menuItem.icon} /> : menuItem.text}
+        </Menu.Item>
+      );
     };
 
     const renderMenu = (isMobile) => {
@@ -63,17 +71,17 @@ class NavBar extends Component {
             name='home'
             href='/#/'
             className='navbar-logo'
-            >
+          >
             <Image src={logo} alt="Terra Salon Logo" size='small' />
           </Menu.Item>)
         }
       };
       const isOnHome = this.state.appState.currentPage() === 'home';
       return (
-        <Menu borderless={ !isMobile } size='huge'>
-          { renderLogo(isOnHome) }
-          <Menu.Menu position='right' icon={ isMobile ? isMobile : undefined }>
-            { renderMenuItems(isMobile && !isOnHome) }
+        <Menu borderless={!isMobile} size='huge'>
+          {renderLogo(isOnHome)}
+          <Menu.Menu position='right' icon={isMobile ? isMobile : undefined}>
+            {renderMenuItems(isMobile && !isOnHome)}
           </Menu.Menu>
         </Menu>
       )
@@ -82,10 +90,10 @@ class NavBar extends Component {
     return (
       <div>
         <Responsive {...Responsive.onlyMobile}>
-          { renderMenu(true) }
+          {renderMenu(true)}
         </Responsive>
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-          { renderMenu(false) }
+          {renderMenu(false)}
         </Responsive>
       </div>
     )

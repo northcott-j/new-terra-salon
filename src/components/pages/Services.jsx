@@ -11,16 +11,16 @@ class Services extends Page {
       if (this.state.data) {
         const content = this.state.data.fields.content;
         const description = content.description.map((line) =>
-          <i key={ line }><br />{ line }</i>
+          <i key={line}><br />{line}</i>
         );
         return (
           <p className="services-description">
             <b>
               <i>
-                { content['lead-line'] }
+                {content['lead-line']}
               </i>
             </b>
-            { description }
+            {description}
           </p>
         )
       } else {
@@ -30,7 +30,7 @@ class Services extends Page {
     const pageServices = () => {
       if (this.state.data) {
         return this.state.data.fields.subItems.map((item) =>
-          <Service key={ item.fields.serviceName } data={ item.fields } />
+          <Service key={item.fields.serviceName} data={item.fields} />
         );
       } else {
         return ""
@@ -39,18 +39,20 @@ class Services extends Page {
     const pageFooter = () => {
       if (this.state.data) {
         return this.state.data.fields.content.footnotes.map((note) =>
-        <i key={ note }><br />{ note }</i>
-      );
+          <i key={note}><br />{note}</i>
+        );
       } else {
         return ""
       }
     };
     return (
-      <div className="services">
-        <h1 className="page-header">Services</h1>
-        { pageDescription() }
-        { pageServices() }
-        { pageFooter() }
+      <div className='margins'>
+        <div className="services">
+          <h1 className="page-header">Services</h1>
+          {pageDescription()}
+          {pageServices()}
+          {pageFooter()}
+        </div>
       </div>
     );
   }
