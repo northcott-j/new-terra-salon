@@ -39,6 +39,9 @@ class NowHiring extends Page {
                 </div>
                 <div className='margins'>
                     <h1 className='NHtitle'>{Title}</h1>
+                    <a className="applyNow" href="https://docs.google.com/forms/d/e/1FAIpQLSf5mPIcAd61S_ploSWPq-gNiZktqbRU0T4DG-pJUN3k-VllhA/viewform?embedded=true">Apply Now</a>
+                    <br />
+                    <br />
                     <div className="partUnderline"></div>
                     <div className='positions'>
                         {loadPositions()}

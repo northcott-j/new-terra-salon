@@ -461,15 +461,33 @@ textarea {
 }
 
 .NHtitle {
-  text-align: left;
+  display: inline;
+  float: left;
   color: #6b6d73;
 }
 
 .partUnderline {
   height: 5px;
-  width: 10%;
+  width: 15%;
   margin-bottom: 30px;
   background-color: #9caa63;
+  display: block;
+}
+
+.applyNow {
+  display: inline;
+  float: right;
+  text-decoration: none;
+  color: #9ea864;
+  font-size: 18px;
+  padding: 8px 6px 8px 6px;
+  border: 2px solid #9ea864;
+}
+
+.applyNow:hover {
+  color: #9ea864;
+  text-decoration: none;
+  background-color: rgba(255, 248, 238, 0.356);
 }
 
 .positions {
