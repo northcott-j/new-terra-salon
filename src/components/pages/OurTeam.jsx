@@ -31,6 +31,7 @@ class OurTeam extends Page {
         < div className="our-team" >
           <div className="our-team-list" >
             <h2 className="OurTeam-title">Our Team</h2>
+            <div className="OurTeam-titleUnderline" />
             <div className="profile-icons">
               {getOurTeamList()}
             </div>

@@ -293,6 +293,16 @@ textarea {
 .OurTeam-title {
   text-align: left;
   width: 100%;
+  font-size: 35px;
+  font-weight: 400;
+  font-family: "Lato",sans-serif !important;
+}
+
+.OurTeam-titleUnderline {
+  text-align: left;
+  width: 10%;
+  height: 3px;
+  background-color: #7f874f;
 }
 
 .profile-icons {
@@ -568,6 +578,22 @@ textarea {
   font-family: Lato, sans-serif;
   font-weight: 400;
   text-decoration: none;
+}
+
+.navServices-active, .ourTeam-active, .contactUs-active, .nowHiring-active {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 20px;
+  color: #404040;
+  background-color: #eaf2d9;
+  z-index: 1;
+  position: relative;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  text-decoration: underline;
 }
 
 .nowHiring-active {
