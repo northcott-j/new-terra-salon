@@ -1,7 +1,6 @@
 import React from 'react';
 import Page from './Page';
 import logo from '../../logo.png';
-import { NavLink } from 'react-router-dom';
 import { Responsive } from 'semantic-ui-react';
 
 class Home extends Page {
