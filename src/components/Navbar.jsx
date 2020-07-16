@@ -1,91 +1,85 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-import { Menu, Image, Responsive, Icon } from 'semantic-ui-react';
+import { Image, Responsive } from 'semantic-ui-react';
 import logo from '../logo.png';
+import drop from '../drop.png';
 
 class NavBar extends Component {
+
   constructor(props) {
     super(props);
 
     this.state = {
       appState: this.props.context,
-      menuItems: [
-        {
-          name: 'services',
-          color: 'grey',
-          to: '/services',
-          text: 'Services',
-          icon: 'sitemap'
-        },
-        {
-          name: 'ourTeam',
-          color: 'grey',
-          to: '/our-team',
-          text: 'Our Team',
-          icon: 'users'
-        },
-        {
-          name: 'contactUs',
-          color: 'grey',
-          to: '/contact-us',
-          text: 'Contact Us',
-          icon: 'comments'
-        },
-        {
-          name: 'nowHiring',
-          color: 'green',
-          to: '/now-hiring',
-          text: 'Now Hiring',
-          //not sure about icon
-          //icon: 'comments'
-        }
-      ]
+      dropNav: false
     };
   }
 
+  dropMenu = () => {
+    if (!this.state.dropNav) {
+      this.setState({ dropNav: true })
+    }
+    else {
+      this.setState({ dropNav: false })
+    }
+  }
+
   render() {
-    const renderMenuItems = (isMobile) => {
-      const className = (isMobile) ? "navbar-icon" : "";
-      return this.state.menuItems.map((menuItem) =>
-        <Menu.Item
-          as={NavLink}
-          key={menuItem.name}
-          name={menuItem.name}
-          color={menuItem.color}
-          to={menuItem.to}
-          className={className}
-        >
-          {(isMobile) ? <Icon className="clear-margins"
-            size="large"
-            name={menuItem.icon} /> : menuItem.text}
-        </Menu.Item>
-      );
-    };
+    const isOnHome = this.state.appState.currentPage() === 'home';
+
+
+    const dropDown = (
+      <div className='dropContent'>
+        <a href='/#/services/' className='navServices'>Services</a>
+        <a href='/#/our-team/' className='ourTeam'>Our Team</a>
+        <a href='/#/contact-us/' className='contactUs'>Contact Us</a>
+        <a href='/#/now-hiring/' className='nowHiring'>Now Hiring</a>
+      </div>
+    )
 
     const renderMenu = (isMobile) => {
-      const renderLogo = (isOnHome) => {
-        if (isOnHome) {
-          return undefined;
-        } else {
-          return (<Menu.Item
-            name='home'
-            href='/#/'
-            className='navbar-logo'
-          >
-            <Image src={logo} alt="Terra Salon Logo" size='small' />
-          </Menu.Item>)
+      if (isMobile) {
+        if (!isOnHome) {
+          return (
+            <div className='navMobile'>
+              <a href='/#/'>
+                <Image className='navLogoMobile' src={logo} alt="Terra Salon Logo" size='small' />
+              </a>
+              <div className='dropDown'>
+                <button onClick={() => this.dropMenu()} className='iconRef'><Image className='dropIcon' alt='drop' src={drop} /></button>
+                {(this.state.dropNav) ? dropDown : ''}
+              </div>
+            </div>
+          )
         }
-      };
-      const isOnHome = this.state.appState.currentPage() === 'home';
-      return (
-        <Menu borderless={!isMobile} size='huge'>
-          {renderLogo(isOnHome)}
-          <Menu.Menu position='right' icon={isMobile ? isMobile : undefined}>
-            {renderMenuItems(isMobile && !isOnHome)}
-          </Menu.Menu>
-        </Menu>
-      )
+      }
+      else {
+        return (
+          <div className='nav-bar'>
+            <div className="navLogo">
+              {loadLogo()}
+            </div>
+            <div className='rightNav'>
+              <a href='/#/services/' className='nav-Services'>Services</a>
+              <a href='/#/our-team/' className='our-Team'>Our Team</a>
+              <a href='/#/contact-us/' className='contact-Us'>Contact Us</a>
+              <a href='/#/now-hiring/' className='now-Hiring'>NOW HIRING</a>
+            </div>
+          </div>
+        )
+      }
     }
+
+    const loadLogo = () => {
+      const isOnHome = this.state.appState.currentPage() === 'home';
+      if (!isOnHome) {
+        return (
+          <a className='navLogo' href='/#/'>
+            <Image className='navLogoI' src={logo} alt="Terra Salon Logo" height='60px' width='133px' />
+          </a>
+        )
+      }
+    }
+
 
     return (
       <div>

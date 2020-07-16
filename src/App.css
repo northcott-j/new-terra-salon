@@ -214,6 +214,14 @@
   color: var(--main-green-color) !important;
 }
 
+.ui.menu .green.item {
+  background-color: #9fa864;
+  margin-top: 6%;
+  margin-bottom: 30px;
+  color: white !important;
+  border-radius: 8px;
+}
+
 .ui.menu .item:hover {
   color: var(--main-green-color) !important;
 }
@@ -513,10 +521,120 @@ textarea {
   height: auto;
 }
 
-.picTR {
-  
+/* Navbar Mobile */
+.navMobile {
+  background-color: rgba(255, 248, 238, 0.74);
 }
 
+.navLogoMobile {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+.iconRef {
+  border: none;
+  background-color: rgba(255, 248, 238, 0.74);
+  outline: none;
+}
+
+.dropContent {
+  display: block;
+  padding-bottom: 3px;
+  background-color: rgb(124, 124, 124);
+}
+
+.navServices, .ourTeam, .contactUs, .nowHiring {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-top: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 20px;
+  color: #404040;
+  background-color: #eaf2d9;
+  z-index: 10;
+  position: relative;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.nowHiring {
+  background-color: #9ea864;
+  color: white;
+}
+
+.navServices:link, .ourTeam:link,
+ .contactUs:link, .nowHiring:link {
+  text-decoration: none;
+}
+
+.navServices:active, .ourTeam:active,
+ .contactUs:active, .nowHiring:active {
+  color: white !important;
+}
+
+/* Navbar Desktop */
+.nav-bar {
+  width: 100%;
+  text-align: right;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(255, 248, 238, 0.74);
+}
+
+.navLogo {
+  float: left;
+  margin-left: 8%;
+  margin-top: -9px;
+}
+
+.rightNav {
+  float: right;
+}
+
+.nav-Services, .our-Team, .contact-Us, .now-Hiring {
+  margin-right: 3%;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-Services:link, .our-Team:link,
+ .contact-Us:link, .now-Hiring:link {
+  text-decoration: none;
+}
+
+.now-Hiring {
+  padding: 4px 10px 4px 10px;
+  border-radius: 5px;
+  background-color: #9ea864;
+  color: white;
+  font-size: 14px;
+  font-weight: 400 !important;
+}
+
+/* Navigation on Home Page - Mobile */
+.homeMenuMobile {
+  display: block;
+  margin: 15px 15% 0px 15%;
+}
+
+.navServices-Home, .ourTeam-Home, .contactUs-Home, .nowHiring-Home {
+  display: block;
+  padding: 4px 6px 4px 6px;
+  background-color: #76747486;
+  color: white;
+  text-decoration: none;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.nowHiring-Home {
+  background-color: #9ea86486 !important;
+}
 
 /* Wraps all pages */
 .page {
