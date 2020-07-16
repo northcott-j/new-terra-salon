@@ -588,12 +588,12 @@ textarea {
   padding-bottom: 3px;
   font-size: 20px;
   color: #404040;
-  background-color: #eaf2d9;
+  background-color: #cee2a1;
   z-index: 1;
   position: relative;
   font-family: Lato, sans-serif;
   font-weight: 400;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .nowHiring-active {
@@ -633,33 +633,11 @@ textarea {
   margin-top: -9px;
 }
 
-.nav-Services, .our-Team, .contact-Us, .now-Hiring {
+.nav-Services, .our-Team, .contact-Us {
   margin-right: 3%;
   color: black;
   font-size: 16px;
   font-weight: 500;
-}
-
-.nav-Services-active, .our-Team-active, .contact-Us-active {
-  text-decoration: underline;
-  margin-right: 3%;
-  color: black;
-  font-size: 16px;
-  font-weight: 500;
-}
-.now-Hiring-active {
-  text-decoration: underline;
-  padding: 8px 10px 8px 10px;
-  border-radius: 5px;
-  background-color: #9ea864;
-  color: white;
-  font-size: 14px;
-  font-weight: 400 !important;
-  margin-right: 3%;
-}
-
-.nav-Services:link, .our-Team:link,
- .contact-Us:link, .now-Hiring:link {
   text-decoration: none;
 }
 
@@ -670,7 +648,55 @@ textarea {
   color: white;
   font-size: 14px;
   font-weight: 400 !important;
+  margin-right: 3%;
 }
+
+.nav-Services:hover, .our-Team:hover, .contact-Us:hover {
+  border-bottom: 1px solid #000;
+  color: black;
+}
+
+.nav-Services-active:hover, .our-Team-active:hover, .contact-Us-active:hover {
+  border-bottom: 1px solid #000;
+  color: black;
+}
+
+.now-Hiring-active:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.now-Hiring:hover {
+  text-decoration: underline !important;
+  color: white;
+}
+
+.nav-Services-active, .our-Team-active, .contact-Us-active {
+  border-bottom: 2px solid #000 !important;
+  text-decoration: none !important;
+  margin-right: 3%;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.now-Hiring-active {
+  border-bottom: 2px solid white !important;
+  z-index: 10;
+  padding: 8px 10px 8px 10px;
+  border-radius: 5px;
+  background-color: #9ea864;
+  color: black;
+  font-size: 14px;
+  font-weight: 500 !important;
+  margin-right: 3%;
+}
+
+.nav-Services:link, .our-Team:link,
+ .contact-Us:link, .now-Hiring:link {
+  text-decoration: none;
+}
+
 
 /* Navigation on Home Page - Mobile */
 .homeMenuMobile {
