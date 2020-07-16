@@ -591,10 +591,6 @@ textarea {
   margin-top: -9px;
 }
 
-.rightNav {
-  float: right;
-}
-
 .nav-Services, .our-Team, .contact-Us, .now-Hiring {
   margin-right: 3%;
   color: black;
