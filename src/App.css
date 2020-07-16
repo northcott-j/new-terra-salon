@@ -522,43 +522,71 @@ textarea {
 }
 
 /* Navbar Mobile */
-.navMobile {
-  background-color: rgba(255, 248, 238, 0.74);
+.navbarWrapper {
+  background-color: rgba(255, 248, 238, 0.74) !important;
 }
 
 .navLogoMobile {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5px;
+  float: left;
 }
 
 .iconRef {
   border: none;
   background-color: rgba(255, 248, 238, 0.74);
+  margin-top: 5%;
   outline: none;
+  float: right;
 }
 
 .dropContent {
   display: block;
+  padding-top: 80px;
   padding-bottom: 3px;
-  background-color: rgb(124, 124, 124);
+  background-color: rgba(255, 248, 238, 0.74)
+}
+
+.seperator {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(124, 124, 124);;
 }
 
 .navServices, .ourTeam, .contactUs, .nowHiring {
   display: block;
   text-align: center;
   width: 100%;
-  margin-top: 3px;
   padding-top: 3px;
   padding-bottom: 3px;
   font-size: 20px;
   color: #404040;
   background-color: #eaf2d9;
-  z-index: 10;
+  z-index: 1;
   position: relative;
   font-family: Lato, sans-serif;
   font-weight: 400;
   text-decoration: none;
+}
+
+.navServices-active, .ourTeam-active, .contactUs-active, .nowHiring-active {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 20px;
+  color: #404040;
+  background-color: #eaf2d9;
+  z-index: 1;
+  position: relative;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.nowHiring-active {
+  background-color: #9ea864;
+  color: white;
+  text-decoration: underline;
 }
 
 .nowHiring {
@@ -574,6 +602,7 @@ textarea {
 .navServices:active, .ourTeam:active,
  .contactUs:active, .nowHiring:active {
   color: white !important;
+  background-color: #404040;
 }
 
 /* Navbar Desktop */

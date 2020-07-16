@@ -25,14 +25,50 @@ class NavBar extends Component {
 
   render() {
     const isOnHome = this.state.appState.currentPage() === 'home';
+    const isOnServices = this.state.appState.currentPage() === 'services';
+    var serviceClassName = 'navServices';
+    const isOnOurTeam = this.state.appState.currentPage() === 'our-team';
+    var ourTeamClassName = 'ourTeam'
+    const isOnContactUs = this.state.appState.currentPage() === 'contact-us';
+    var contactUsClassName = 'contactUs';
+    const isOnNowHiring = this.state.appState.currentPage() === 'now-hiring';
+    var nowHiringClassName = 'nowHiring'
 
+    if (isOnServices) {
+      serviceClassName = 'navServices-active';
+      ourTeamClassName = 'ourTeam'
+      contactUsClassName = 'contactUs';
+      nowHiringClassName = 'nowHiring'
+    }
+    if (isOnOurTeam) {
+      serviceClassName = 'navServices';
+      ourTeamClassName = 'ourTeam-active';
+      contactUsClassName = 'contactUs';
+      nowHiringClassName = 'nowHiring'
+    }
+    if (isOnContactUs) {
+      serviceClassName = 'navServices';
+      ourTeamClassName = 'ourTeam';
+      contactUsClassName = 'contactUs-active';
+      nowHiringClassName = 'nowHiring'
+    }
+    if (isOnNowHiring) {
+      serviceClassName = 'navServices';
+      ourTeamClassName = 'ourTeam'
+      contactUsClassName = 'contactUs';
+      nowHiringClassName = 'nowHiring-active';
+    }
 
     const dropDown = (
       <div className='dropContent'>
-        <a href='/#/services/' className='navServices'>Services</a>
-        <a href='/#/our-team/' className='ourTeam'>Our Team</a>
-        <a href='/#/contact-us/' className='contactUs'>Contact Us</a>
-        <a href='/#/now-hiring/' className='nowHiring'>Now Hiring</a>
+        <a onClick={() => this.dropMenu()} href='/#/services/' className={serviceClassName}>Services</a>
+        <div className='seperator' />
+        <a onClick={() => this.dropMenu()} href='/#/our-team/' className={ourTeamClassName}>Our Team</a>
+        <div className='seperator' />
+        <a onClick={() => this.dropMenu()} href='/#/contact-us/' className={contactUsClassName}>Contact Us</a>
+        <div className='seperator' />
+        <a onClick={() => this.dropMenu()} href='/#/now-hiring/' className={nowHiringClassName}>Now Hiring</a>
+        <div className='seperator' />
       </div>
     )
 
@@ -82,7 +118,7 @@ class NavBar extends Component {
 
 
     return (
-      <div>
+      <div className='navbarWrapper'>
         <Responsive {...Responsive.onlyMobile}>
           {renderMenu(true)}
         </Responsive>
