@@ -78,6 +78,16 @@ class NavBar extends Component {
       contactUsClassNameD = 'contact-Us';
       nowHiringClassNameD = 'now-Hiring-active'
     }
+    if (isOnHome) {
+      serviceClassName = 'navServices';
+      ourTeamClassName = 'ourTeam'
+      contactUsClassName = 'contactUs';
+      nowHiringClassName = 'nowHiring';
+      serviceClassNameD = 'nav-Services';
+      ourTeamClassNameD = 'our-Team'
+      contactUsClassNameD = 'contact-Us';
+      nowHiringClassNameD = 'now-Hiring';
+    }
 
     const dropDown = (
       <div className='dropContent'>
