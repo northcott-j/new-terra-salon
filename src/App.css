@@ -528,12 +528,15 @@ textarea {
 
 .navLogoMobile {
   float: left;
+  margin-left: 30px;
+  margin-top: 5px;
 }
 
 .iconRef {
   border: none;
   background-color: rgba(255, 248, 238, 0.74);
-  margin-top: 5%;
+  margin-top: 6%;
+  margin-right: 30px;
   outline: none;
   float: right;
 }
@@ -565,22 +568,6 @@ textarea {
   font-family: Lato, sans-serif;
   font-weight: 400;
   text-decoration: none;
-}
-
-.navServices-active, .ourTeam-active, .contactUs-active, .nowHiring-active {
-  display: block;
-  text-align: center;
-  width: 100%;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  font-size: 20px;
-  color: #404040;
-  background-color: #eaf2d9;
-  z-index: 1;
-  position: relative;
-  font-family: Lato, sans-serif;
-  font-weight: 400;
-  text-decoration: underline;
 }
 
 .nowHiring-active {
@@ -627,13 +614,31 @@ textarea {
   font-weight: 500;
 }
 
+.nav-Services-active, .our-Team-active, .contact-Us-active {
+  text-decoration: underline;
+  margin-right: 3%;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+.now-Hiring-active {
+  text-decoration: underline;
+  padding: 8px 10px 8px 10px;
+  border-radius: 5px;
+  background-color: #9ea864;
+  color: white;
+  font-size: 14px;
+  font-weight: 400 !important;
+  margin-right: 3%;
+}
+
 .nav-Services:link, .our-Team:link,
  .contact-Us:link, .now-Hiring:link {
   text-decoration: none;
 }
 
 .now-Hiring {
-  padding: 4px 10px 4px 10px;
+  padding: 8px 10px 8px 10px;
   border-radius: 5px;
   background-color: #9ea864;
   color: white;

@@ -27,36 +27,56 @@ class NavBar extends Component {
     const isOnHome = this.state.appState.currentPage() === 'home';
     const isOnServices = this.state.appState.currentPage() === 'services';
     var serviceClassName = 'navServices';
+    var serviceClassNameD = 'navServices';
     const isOnOurTeam = this.state.appState.currentPage() === 'our-team';
     var ourTeamClassName = 'ourTeam'
+    var ourTeamClassNameD = 'ourTeam'
     const isOnContactUs = this.state.appState.currentPage() === 'contact-us';
     var contactUsClassName = 'contactUs';
+    var contactUsClassNameD = 'contactUs';
     const isOnNowHiring = this.state.appState.currentPage() === 'now-hiring';
     var nowHiringClassName = 'nowHiring'
+    var nowHiringClassNameD = 'nowHiring'
 
     if (isOnServices) {
       serviceClassName = 'navServices-active';
       ourTeamClassName = 'ourTeam'
       contactUsClassName = 'contactUs';
       nowHiringClassName = 'nowHiring'
+      serviceClassNameD = 'nav-Services-active';
+      ourTeamClassNameD = 'our-Team'
+      contactUsClassNameD = 'contact-Us';
+      nowHiringClassNameD = 'now-Hiring'
     }
     if (isOnOurTeam) {
       serviceClassName = 'navServices';
       ourTeamClassName = 'ourTeam-active';
       contactUsClassName = 'contactUs';
       nowHiringClassName = 'nowHiring'
+      serviceClassNameD = 'nav-Services';
+      ourTeamClassNameD = 'our-Team-active'
+      contactUsClassNameD = 'contact-Us';
+      nowHiringClassNameD = 'now-Hiring'
     }
     if (isOnContactUs) {
       serviceClassName = 'navServices';
       ourTeamClassName = 'ourTeam';
       contactUsClassName = 'contactUs-active';
       nowHiringClassName = 'nowHiring'
+      serviceClassNameD = 'nav-Services';
+      ourTeamClassNameD = 'our-Team'
+      contactUsClassNameD = 'contact-Us-active';
+      nowHiringClassNameD = 'now-Hiring'
     }
     if (isOnNowHiring) {
       serviceClassName = 'navServices';
       ourTeamClassName = 'ourTeam'
       contactUsClassName = 'contactUs';
       nowHiringClassName = 'nowHiring-active';
+      serviceClassNameD = 'nav-Services';
+      ourTeamClassNameD = 'our-Team'
+      contactUsClassNameD = 'contact-Us';
+      nowHiringClassNameD = 'now-Hiring-active'
     }
 
     const dropDown = (
@@ -95,10 +115,10 @@ class NavBar extends Component {
               {loadLogo()}
             </div>
             <div className='rightNav'>
-              <a href='/#/services/' className='nav-Services'>Services</a>
-              <a href='/#/our-team/' className='our-Team'>Our Team</a>
-              <a href='/#/contact-us/' className='contact-Us'>Contact Us</a>
-              <a href='/#/now-hiring/' className='now-Hiring'>NOW HIRING</a>
+              <a href='/#/services/' className={serviceClassNameD}>Services</a>
+              <a href='/#/our-team/' className={ourTeamClassNameD}>Our Team</a>
+              <a href='/#/contact-us/' className={contactUsClassNameD}>Contact Us</a>
+              <a href='/#/now-hiring/' className={nowHiringClassNameD}>NOW HIRING</a>
             </div>
           </div>
         )
