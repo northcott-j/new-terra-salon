@@ -17,15 +17,6 @@ class OurTeam extends Page {
       }
     };
 
-    const pageFooter = () => {
-      if (this.state.data) {
-        const content = this.state.data.fields.content;
-        return content["hiring-link-text"]
-      } else {
-        return ""
-      }
-    };
-
     return (
       <div className='margins'>
         < div className="our-team" >
@@ -35,9 +26,6 @@ class OurTeam extends Page {
             <div className="profile-icons">
               {getOurTeamList()}
             </div>
-            <h5 className="OurTeam-footer">
-              {pageFooter()}
-            </h5>
           </div >
         </div >
       </div>

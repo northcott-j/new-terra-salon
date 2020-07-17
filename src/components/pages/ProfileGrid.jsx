@@ -48,19 +48,19 @@ export class ProfileGrid extends Page {
         const nextBio = () => {
             if (employees[parseInt(currentEmployee) + 1]) {
                 var employeeName = employees[currentEmployee + 1].fields.name
-                return <h5 onClick={() => this.toOtherBio(employeeName)}>{employeeName}</h5>
+                return <h5 className='nextBio' onClick={() => this.toOtherBio(employeeName)}>{employeeName} &#8594;</h5>
             }
         }
 
         const prevBio = () => {
             if (employees[parseInt(currentEmployee) - 1]) {
                 var employeeName = employees[currentEmployee - 1].fields.name
-                return <h5 onClick={() => this.toOtherBio(employeeName, currentEmployee - 1)}>{employeeName}</h5>
+                return <h5 className='prevBio' onClick={() => this.toOtherBio(employeeName, currentEmployee - 1)}>&#8592; {employeeName}</h5>
             }
         }
 
         return (
-            <div>
+            <div className='profilePages'>
                 {loadBio()}
                 <div className="bioNavigators">
                     {nextBio()}

@@ -412,6 +412,15 @@ textarea {
 
 
 /* Added for ProfileGrid & ProfileGridLayout */
+/* Desktop */
+.profilePages {
+  width: 100%;
+  height: 100%;
+}
+
+.profileGrid {
+  margin: 30px 7% 30px 7%;
+}
 
 .profileGrid-pic {
   height: 300px;
@@ -426,6 +435,7 @@ textarea {
   text-align: left;
   font-size: 20px;
   font-style: italic;
+  font-family: 'Lato', sans-serif;
 }
 
 .profileGrid-quoted {
@@ -433,20 +443,94 @@ textarea {
   text-align: left;
   font-style: italic;
   margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
 }
 
 .profileGrid-bio { 
   text-align: left;
   font-size: 16px;
+  font-family: 'Lato', sans-serif;
 }
 
 .profileGrid-name {
   text-align: left;
   width: 100%;
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.profileGrid-underline {
+  height: 3px;
+  width: 10%;
+  margin-bottom: 30px;
+  background-color: #9caa63;
+  display: block;
 }
 
 .profileGrid-body {
   margin-top: 25px;
+}
+
+.bioNavigators {
+  margin: 7% 7% 0px 7%;
+}
+
+.prevBio {
+  float: left;
+  display: flex;
+  cursor: pointer;
+}
+
+.nextBio {
+  float: right;
+  display: flex;
+  cursor: pointer;
+}
+
+.nextBio:hover, .prevBio:hover {
+  border-bottom: 1px solid black;
+}
+
+/* Mobile */
+.profileGridM {
+  margin: 30px 5% 30px 5%;
+}
+
+.profileGrid-underlineM {
+  height: 3px;
+  width: 20%;
+  margin-bottom: 30px;
+  background-color: #9caa63;
+  display: block;
+}
+
+.profileGrid-picM {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  float: center;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+.profileGrid-quoteM { 
+  margin-top: 20px;
+  text-align: left;
+  font-size: 20px;
+  font-style: italic;
+  display: block;
+}
+
+.profileGrid-quotedM {
+  font-size: 16px;
+  text-align: left;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.profileGrid-bioM { 
+  text-align: left;
+  font-size: 16px;
 }
 
 /* Added for NowHiring and Position */
@@ -551,19 +635,19 @@ textarea {
 
 /* Navbar Mobile */
 .navbarWrapper {
-  background-color: rgba(255, 248, 238, 0.74) !important;
+  background-color:white !important;
 }
 
 .navLogoMobile {
   float: left;
   margin-left: 30px;
-  margin-top: 5px;
+  margin-top: 3px;
 }
 
 .iconRef {
   border: none;
-  background-color: rgba(255, 248, 238, 0.74);
-  margin-top: 6%;
+  background-color: white;
+  margin-top: 5%;
   margin-right: 30px;
   outline: none;
   float: right;
@@ -572,14 +656,19 @@ textarea {
 .dropContent {
   display: block;
   padding-top: 80px;
-  padding-bottom: 3px;
-  background-color: rgba(255, 248, 238, 0.74)
+  background-color: white;
 }
 
 .seperator {
   width: 100%;
-  height: 3px;
+  height: 2px;
   background-color: rgb(124, 124, 124);;
+}
+
+.dot {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-weight: 900;
 }
 
 .navServices, .ourTeam, .contactUs, .nowHiring {
@@ -596,28 +685,6 @@ textarea {
   font-family: Lato, sans-serif;
   font-weight: 400;
   text-decoration: none;
-}
-
-.navServices-active, .ourTeam-active, .contactUs-active, .nowHiring-active {
-  display: block;
-  text-align: center;
-  width: 100%;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  font-size: 20px;
-  color: #404040;
-  background-color: #cee2a1;
-  z-index: 1;
-  position: relative;
-  font-family: Lato, sans-serif;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-.nowHiring-active {
-  background-color: #9ea864;
-  color: white;
-  text-decoration: underline;
 }
 
 .nowHiring {
@@ -642,7 +709,18 @@ textarea {
   text-align: right;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: rgba(255, 248, 238, 0.74);
+  background-color: white;
+}
+
+.nav-bar-hide {
+  display: none;
+}
+
+.nav-bar-home {
+  width: 100%;
+  text-align: right;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .navLogo {

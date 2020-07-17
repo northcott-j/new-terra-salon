@@ -13,6 +13,14 @@ class Home extends Page {
         const content = this.state.data.fields.content;
         return (
           <div>
+            <Responsive className='nav-bar-home' minWidth={Responsive.onlyTablet.minWidth}>
+              <div className='rightNav'>
+                <a href='/#/services/' style={{ fontWeight: 600 }} className='nav-Services'>Services</a>
+                <a href='/#/our-team/' style={{ fontWeight: 600 }} className='our-Team'>Our Team</a>
+                <a href='/#/contact-us/' style={{ fontWeight: 600 }} className='contact-Us'>Contact Us</a>
+                <a href='/#/now-hiring/' style={{ fontWeight: 600 }} className='now-Hiring'>NOW HIRING</a>
+              </div>
+            </Responsive>
             <img src={logo} alt="Terra Salon Logo" />
             <Responsive {...Responsive.onlyMobile}>
               <div>

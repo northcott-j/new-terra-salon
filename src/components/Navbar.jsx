@@ -26,63 +26,63 @@ class NavBar extends Component {
   render() {
     const isOnHome = this.state.appState.currentPage() === 'home';
     const isOnServices = this.state.appState.currentPage() === 'services';
-    var serviceClassName = 'navServices';
+    var serviceActive = 'Services';
     var serviceClassNameD = 'navServices';
     const isOnOurTeam = this.state.appState.currentPage() === 'our-team';
-    var ourTeamClassName = 'ourTeam'
+    var ourTeamActive = 'Our Team'
     var ourTeamClassNameD = 'ourTeam'
     const isOnContactUs = this.state.appState.currentPage() === 'contact-us';
-    var contactUsClassName = 'contactUs';
+    var contactUsActive = 'Contact Us';
     var contactUsClassNameD = 'contactUs';
     const isOnNowHiring = this.state.appState.currentPage() === 'now-hiring';
-    var nowHiringClassName = 'nowHiring'
-    var nowHiringClassNameD = 'nowHiring'
+    var nowHiringActive = 'Now Hiring'
+    var nowHiringClassNameD = 'now-Hiring'
 
     if (isOnServices) {
-      serviceClassName = 'navServices-active';
-      ourTeamClassName = 'ourTeam'
-      contactUsClassName = 'contactUs';
-      nowHiringClassName = 'nowHiring'
+      serviceActive = '<span class=\'dot\'>&mdash;</span> Services <span class=\'dot\'>&mdash;</span>';
+      ourTeamActive = 'Our Team'
+      contactUsActive = 'Contact Us';
+      nowHiringActive = 'NOW HIRING';
       serviceClassNameD = 'nav-Services-active';
       ourTeamClassNameD = 'our-Team'
       contactUsClassNameD = 'contact-Us';
       nowHiringClassNameD = 'now-Hiring'
     }
     if (isOnOurTeam) {
-      serviceClassName = 'navServices';
-      ourTeamClassName = 'ourTeam-active';
-      contactUsClassName = 'contactUs';
-      nowHiringClassName = 'nowHiring'
+      serviceActive = 'Services';
+      ourTeamActive = '<span class=\'dot\'>&mdash;</span> Our Team <span class=\'dot\'>&mdash;</span>'
+      contactUsActive = 'Contact Us';
+      nowHiringActive = 'NOW HIRING';
       serviceClassNameD = 'nav-Services';
       ourTeamClassNameD = 'our-Team-active'
       contactUsClassNameD = 'contact-Us';
       nowHiringClassNameD = 'now-Hiring'
     }
     if (isOnContactUs) {
-      serviceClassName = 'navServices';
-      ourTeamClassName = 'ourTeam';
-      contactUsClassName = 'contactUs-active';
-      nowHiringClassName = 'nowHiring'
+      serviceActive = 'Services';
+      ourTeamActive = 'Our Team'
+      contactUsActive = '<span class=\'dot\'>&mdash;</span> Contact Us <span class=\'dot\'>&mdash;</span>';
+      nowHiringActive = 'NOW HIRING';
       serviceClassNameD = 'nav-Services';
       ourTeamClassNameD = 'our-Team'
       contactUsClassNameD = 'contact-Us-active';
       nowHiringClassNameD = 'now-Hiring'
     }
     if (isOnNowHiring) {
-      serviceClassName = 'navServices';
-      ourTeamClassName = 'ourTeam'
-      contactUsClassName = 'contactUs';
-      nowHiringClassName = 'nowHiring-active';
+      serviceActive = 'Services';
+      ourTeamActive = 'Our Team'
+      contactUsActive = 'Contact Us';
+      nowHiringActive = '<span class=\'dot\'>&mdash;</span> NOW HIRING <span class=\'dot\'>&mdash;</span>';
       serviceClassNameD = 'nav-Services';
       ourTeamClassNameD = 'our-Team'
       contactUsClassNameD = 'contact-Us';
       nowHiringClassNameD = 'now-Hiring-active'
     }
     if (isOnHome) {
-      serviceClassName = 'navServices';
-      ourTeamClassName = 'ourTeam'
-      contactUsClassName = 'contactUs';
-      nowHiringClassName = 'nowHiring';
+      serviceActive = 'Services';
+      ourTeamActive = 'Our Team'
+      contactUsActive = 'Contact Us';
+      nowHiringActive = 'NOW HIRING';
       serviceClassNameD = 'nav-Services';
       ourTeamClassNameD = 'our-Team'
       contactUsClassNameD = 'contact-Us';
@@ -91,17 +91,18 @@ class NavBar extends Component {
 
     const dropDown = (
       <div className='dropContent'>
-        <a onClick={() => this.dropMenu()} href='/#/services/' className={serviceClassName}>Services</a>
+        <a onClick={() => this.dropMenu()} href='/#/services/' className='navServices' dangerouslySetInnerHTML={{ __html: serviceActive }} />
         <div className='seperator' />
-        <a onClick={() => this.dropMenu()} href='/#/our-team/' className={ourTeamClassName}>Our Team</a>
+        <a onClick={() => this.dropMenu()} href='/#/our-team/' className='ourTeam' dangerouslySetInnerHTML={{ __html: ourTeamActive }} />
         <div className='seperator' />
-        <a onClick={() => this.dropMenu()} href='/#/contact-us/' className={contactUsClassName}>Contact Us</a>
+        <a onClick={() => this.dropMenu()} href='/#/contact-us/' className='contactUs' dangerouslySetInnerHTML={{ __html: contactUsActive }} />
         <div className='seperator' />
-        <a onClick={() => this.dropMenu()} href='/#/now-hiring/' className={nowHiringClassName}>Now Hiring</a>
+        <a onClick={() => this.dropMenu()} href='/#/now-hiring/' className='nowHiring' dangerouslySetInnerHTML={{ __html: nowHiringActive }} />
         <div className='seperator' />
       </div>
     )
 
+    var navDesktop = 'nav-bar'
     const renderMenu = (isMobile) => {
       if (isMobile) {
         if (!isOnHome) {
@@ -119,8 +120,14 @@ class NavBar extends Component {
         }
       }
       else {
+        if (isOnHome) {
+          navDesktop = 'nav-bar-hide'
+        }
+        else {
+          navDesktop = 'nav-bar'
+        }
         return (
-          <div className='nav-bar'>
+          <div className={navDesktop}>
             <div className="navLogo">
               {loadLogo()}
             </div>
