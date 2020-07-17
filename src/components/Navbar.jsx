@@ -153,7 +153,6 @@ class NavBar extends Component {
       }
     }
 
-
     return (
       <div className='navbarWrapper'>
         <Responsive {...Responsive.onlyMobile}>
