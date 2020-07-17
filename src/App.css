@@ -817,7 +817,6 @@ textarea {
 /* Wraps all pages */
 .page {
   flex: 1;
-  /* padding-top: 1em; */
   height: max-content;
   position: relative;
 }
